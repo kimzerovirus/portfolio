@@ -1,0 +1,408 @@
+body{
+    background-color: #00BAE7;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+section{
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.center{
+    margin:  0 auto;
+    display: flex;
+    justify-content : space-between;
+    max-width: 1024px;
+    width: 90%;
+}
+h1.logo,
+.logo a img{
+    width: 60px;
+    /* display: none; */
+}
+.logo a img{
+    display: none;
+}
+.tit{
+    font-size: 1.5rem;
+}
+
+header{
+    margin-top: 1.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+/* section */
+
+/* intro */
+section.intro{
+
+}
+section.intro .container{
+    height: 100%;
+    display: flex;
+    /* background-color: black; */
+    justify-content: space-between;
+    align-items:center
+    /* justify-content: flex-end; */
+    /* position: relative; */
+}
+
+section.intro .container .intro-tit{  
+    /* z-index: 10; */
+    /* position: absolute; */
+    /* width: 100%; */
+    
+    /* background: yellow; */
+    /* margin-top: -5vh; */
+    width: 50%;
+}
+section.intro .container .intro-tit h2{
+    font-size: 3rem;
+    line-height: 4.5rem;
+}
+
+.big{
+    line-height: 6rem;
+    font-size: 5rem !important;
+}
+
+.circle-point::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: yellow;
+    margin-left: 1.8rem;
+}
+
+section.intro .container .banner{
+    width: 50%;
+    align-self: flex-end;
+}
+
+section.intro .container .banner img{
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+/* project */
+section.project{
+    background-color: white;
+    height: auto;
+    padding-top: 1.5rem;
+}
+
+section.project .container h3{
+    width: 100%;
+}
+
+section.project .container .content .content-img img{
+    width: 100%;
+}
+
+section.project .container .content .content-tit{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section.project .container .content .content-tit div ul li{
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin: 0.5rem 0;
+    border: 1px dotted #00BAE7;
+    border-radius: .5rem;
+}
+section.project .container .content .content-tit div a{
+}
+
+
+/* skills */
+section.skills{
+     padding-top: 1.5rem;
+     height: auto;
+}
+
+/* contact */
+section.contact .container{
+    display: flex;
+    justify-content: space-around;
+}
+section.contact .container .contact-tit{
+    width: 100%;
+}
+section.contact .container .contact-form{
+    width: 100%;
+    background: black;
+}
+
+section.contact .container .contact-form label,
+section.contact .container .contact-form input,
+section.contact .container .contact-form textarea{
+    width: 100%;
+
+}
+
+    /* contact */
+    section.contact .container .contact-form{
+        background-color: #fff;
+    }
+    section.contact .container .contact-form label,
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        color: black;
+        border-radius: 5px;
+    }
+
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        background-color: #00BAE7;
+    }
+
+
+
+@media all and (max-width:767px){
+    .half{
+        width: 100%;
+    }
+
+    /* nav */
+    .gnb > ul{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 9;
+        background: white;
+        top: 0;
+        left: 0;
+    }
+    .gnb > ul.active2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    .gnb > ul.active2 > li > a{
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+    .gnb > ul.active2 > li > a:hover{
+        border-bottom: 2px solid black;
+    }
+
+
+        /* hamburger */
+        .ham {
+            position: fixed;
+            z-index: 10;
+            top: 1.5rem;
+            right: 5%;
+            /* /* transform: translate(-50%, -50%); */
+            /* width:60px; height: 55px;  */
+            cursor:pointer;
+        /*  background: rgba(255,255,255,0.3); */
+        }
+        .ham span {
+            display: block;
+            background: #fff;
+            width: 42px;
+            height: 4px;
+            border-radius: 3px;
+            transition: margin 0.25s 0.25s, transform 0.25s ;
+        }
+        .ham .bar1 {margin-bottom: 8px;}
+        .ham .bar2 {}
+        .ham .bar3 {margin-top: 8px;}
+        
+        .ham.active span {
+            transition: margin 0.25s, transform 0.25s 0.25s;
+            background: black;
+        }
+        
+        .ham.active .bar1 {
+            margin-top: 8px;
+            margin-bottom: -4px;
+            transform: rotate(45deg);
+        }
+        .ham.active .bar2 {
+            transform: rotate(45deg);
+            
+        }
+        .ham.active .bar3 {
+            margin-top: -4px;
+            transform: rotate(135deg);
+        }
+
+
+
+    /* intro */
+    h1.logo,
+    .logo a img{
+        display: none;
+    }
+    section.intro .container{
+        display: block;
+    }
+    section.intro .container .intro-tit,
+    section.intro .container .banner{
+        width: 100%
+    }
+    section.intro .container .intro-tit h2{
+        padding: 4rem 0 2rem;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    
+    .big{
+        line-height: 5rem;
+        font-size: 4rem !important;
+    }
+    
+    .circle-point::before{
+        margin-left: 1.2rem;
+    }
+
+
+    /* skills */
+    .skills-wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .skills-box{
+        width: 33%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .skills-box img{
+        width: 100%;
+        padding:1.2rem;
+    }
+
+
+    /* contact */
+    section.contact .container{
+        display: block;
+    }
+
+        /* contact */
+    section.contact .container .contact-form{
+        margin-top: .5rem;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+    }
+    section.contact .container .contact-form label,
+    section.contact .container .contact-form input{
+        margin-bottom: .5rem;
+        display: block;
+    }
+    section.contact .container .contact-form label,
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        font-size: 1rem;
+    }
+
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        padding: .5rem;
+    }
+
+}
+
+@media all and (min-width:768px){
+    .duplex{
+        display: flex;
+        flex-direction: row-reverse
+    }
+
+    .flex{
+        display: flex;
+    }
+    .flex .content-tit{
+        padding-left: 3rem;
+    }
+    .duplex .content-tit{
+        padding-right: 3rem;
+    }
+
+    .half{
+        width: 50%;
+    }
+
+    section{
+        height: 100vh;
+    }
+    
+    /* nav */
+    .gnb ul li{
+        display: inline-block;
+        padding: 16px 24px;
+    }
+    .gnb ul li a:hover{
+        border-bottom: 1px solid;
+    }
+    .ham{
+        display: none;
+    }
+
+    /* projects */
+
+    /* skills */
+    .skills-wrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .skills-box{
+        width: 16%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+    .skills-box img{
+        width: 100%;
+    }
+
+
+    /* contact */
+    section.contact .container .contact-form{
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: .5rem;
+    }
+    section.contact .container .contact-form label,
+    section.contact .container .contact-form input{
+        margin-bottom: 1rem;
+        display: block;
+    }
+    section.contact .container .contact-form label,
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        font-size: 1.5rem;
+    }
+
+    section.contact .container .contact-form input,
+    section.contact .container .contact-form textarea{
+        padding: 1rem;
+    }
+}
+
+@media all and(min-width:1024px){
+
+}
+
+
+
+
